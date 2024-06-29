@@ -54,6 +54,10 @@ io.on('connection', (socket) => {
 		io.emit('newBidAdded', data);
 	});
 
+	socket.on('timerExtended', () => {
+		io.emit('timerExtended');
+	});
+
 	socket.on('disconnect', () => {
 		console.log('User disconnected');
 	});

@@ -6,5 +6,6 @@ const TenderSchema = new Schema({
 	startTime: { type: Date, required: true },
 	endTime: { type: Date, required: true },
 	bufferTime: { type: Number, required: true },
+	isExtended: { type: Boolean, default: false },
 });
 export default model('Tender', TenderSchema);
