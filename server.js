@@ -54,8 +54,8 @@ io.on('connection', (socket) => {
 		io.emit('newBidAdded', data);
 	});
 
-	socket.on('timerExtended', () => {
-		io.emit('timerExtended');
+	socket.on('timerExtended', (data) => {
+		io.emit('timerExtended', data);
 	});
 
 	socket.on('disconnect', () => {
